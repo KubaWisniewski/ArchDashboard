@@ -1,7 +1,7 @@
 <template>
   <v-card min-height="550px" outlined>
-    <v-card-title class="headline font-weight-bold"
-      ><v-icon large color="#ee5d2c" class="mr-2">$shopping</v-icon>Ostatnio
+    <v-card-title class="headline font-weight-bold pa-12"
+      ><v-icon large color="#ee5d2c" class="mr-4">$shopping</v-icon>Ostatnio
       dokonane zakupy <v-spacer></v-spacer>
       <!--      <v-text-field-->
       <!--        v-model="search"-->
@@ -19,9 +19,22 @@
       :headers="headers"
       :items="items"
       :search="search"
-      class="ma-2"
+      class="data-row"
       hide-default-footer
-    ></v-data-table>
+    >
+      <template v-slot:item="{ item }">
+        <v-hover>
+          <template v-slot="{ hover }">
+            <tr :class="`elevation-${hover ? 4 : 0}`">
+              <td class="font-weight-bold">{{ item.name }}</td>
+              <td class="font-weight-bold">{{ item.product }}</td>
+              <td class="font-weight-bold">{{ item.amount }}</td>
+              <td class="font-weight-bold">{{ item.discount }}</td>
+            </tr>
+          </template>
+        </v-hover>
+      </template>
+    </v-data-table>
   </v-card>
 </template>
 
@@ -77,4 +90,27 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style>
+tbody tr:nth-of-type(odd) {
+  background-color: rgba(0, 0, 0, 0.01);
+}
+tr td:first-child {
+  border-left: 4px solid transparent;
+}
+table {
+  padding: 10px;
+}
+tr:hover td:first-child {
+  border-left: solid #ee5d2c 4px !important;
+  border-radius: 0 !important;
+}
+.v-data-table td,
+.v-data-table th {
+  height: 60px !important;
+}
+.theme--light.v-data-table tbody tr:not(:last-child) td,
+.theme--light.v-data-table thead tr:last-child th {
+  border-bottom: none !important;
+  border-top: none !important;
+}
+</style>

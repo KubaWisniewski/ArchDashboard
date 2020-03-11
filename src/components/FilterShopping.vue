@@ -19,6 +19,8 @@ export default {
 };
 </script>
 
-<style scoped>  *{ text-transform: capitalize !important; }
-
+<style scoped>
+* {
+  text-transform: capitalize !important;
+}
 </style>

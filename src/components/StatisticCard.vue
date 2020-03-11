@@ -1,7 +1,7 @@
 <template>
   <v-card min-height="550px" outlined>
-    <v-card-title class="headline font-weight-bold"
-      ><v-icon large color="#ee5d2c" class="mr-2">$statistics</v-icon
+    <v-card-title class="headline font-weight-bold pa-12"
+      ><v-icon large color="#ee5d2c" class="mr-4">$statistics</v-icon
       >Statystyki</v-card-title
     >
     <v-divider></v-divider>

@@ -11,7 +11,9 @@ export default {
         legendHtml.push("<ul>");
         const item = chart.data.datasets[0];
         for (var i = 0; i < item.data.length; i++) {
-          legendHtml.push(`<li>${chart.data.labels[i]} ${item.data[i]} %</li>`);
+          legendHtml.push(
+            `<li>${chart.data.labels[i]} <span>${item.data[i]} %</span></li>`
+          );
         }
         legendHtml.push("</ul>");
         return legendHtml.join("");
@@ -46,4 +48,19 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0 !important;
+}
+li {
+  text-justify: distribute-all-lines;
+}
+li span {
+  font-size: 36px;
+  line-height: 60px;
+  color: #000000;
+  font-weight: 300;
+}
+</style>

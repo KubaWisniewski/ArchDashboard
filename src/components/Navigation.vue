@@ -42,9 +42,11 @@
             </v-list-item-icon>
 
             <v-list-item-content>
-              <v-list-item-title style="color: black">{{
-                item.title
-              }}</v-list-item-title>
+              <v-list-item-title
+                style="color: black"
+                class="font-weight-bold"
+                >{{ item.title }}</v-list-item-title
+              >
             </v-list-item-content>
           </v-list-item>
         </v-list-item-group>
