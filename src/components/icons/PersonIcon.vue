@@ -9,7 +9,6 @@
   >
     <g
       transform="translate(0.000000,26.000000) scale(0.100000,-0.100000)"
-      class="style"
       stroke="none"
     >
       <path
@@ -28,9 +27,3 @@ export default {
   name: "PersonIcon"
 };
 </script>
-
-<style scoped>
-.style {
-  fill: currentColor;
-}
-</style>

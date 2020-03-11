@@ -9,7 +9,6 @@
   >
     <g
       transform="translate(0.000000,14.000000) scale(0.100000,-0.100000)"
-      class="style"
       stroke="none"
     >
       <path
@@ -26,9 +25,3 @@ export default {
   name: "ArrowIcon"
 };
 </script>
-
-<style scoped>
-.style {
-  fill: currentColor;
-}
-</style>

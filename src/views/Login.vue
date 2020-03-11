@@ -1,23 +1,27 @@
 <template>
   <v-col class="col-lg-6 fill-height">
-    <logo></logo>
+    <img id="logo" alt="Logo" src="../assets/Logo.png" />
     <login-form></login-form>
   </v-col>
 </template>
 
 <script>
 import LoginForm from "../components/LoginForm";
-import Logo from "../components/Logo";
 
 export default {
   name: "Login",
-  components: { LoginForm, Logo }
+  components: { LoginForm }
 };
 </script>
-<style>
+<style scoped>
 .col {
   padding: 0;
   margin: 0;
   min-width: calc(100% - 960px);
+}
+#logo {
+  position: absolute;
+  top: 51px;
+  left: 47px;
 }
 </style>

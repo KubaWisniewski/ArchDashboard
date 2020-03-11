@@ -27,7 +27,12 @@
             solo
           />
         </v-form>
-        <v-btn class="white--text" color="rgb(238,93,44)" height="50px" block
+        <v-btn
+          class="white--text"
+          color="rgb(238,93,44)"
+          height="50px"
+          block
+          to="/dashboard"
           >Zaloguj <v-icon id="arrowIcon">$arrow</v-icon></v-btn
         >
       </v-card>
@@ -42,7 +47,7 @@ export default {
 </script>
 <style>
 #personIcon {
-  color: rgb(238, 93, 44);
+  color: #ee5d2c;
   margin-right: 10px;
 }
 #arrowIcon {
