@@ -27,7 +27,6 @@ const router = new VueRouter({
 
 router.beforeEach((to, from, next) => {
   const loggedIn = store.getters.loggedIn;
-  console.log(loggedIn);
   if (loggedIn === false && to.path !== "/login") {
     return next({
       path: "/login"

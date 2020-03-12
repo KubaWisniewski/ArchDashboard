@@ -9,7 +9,7 @@
   >
     <g
       transform="translate(0.000000,27.000000) scale(0.100000,-0.100000)"
-          stroke="none"
+      stroke="none"
     >
       <path
         d="M133 253 c-18 -18 -23 -19 -36 -6 -35 35 -97 -53 -97 -140 0 -40 4
