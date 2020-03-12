@@ -1,10 +1,9 @@
 <template>
   <v-card min-height="550px" outlined>
-    <v-card-title class="headline font-weight-bold pa-12"
+    <v-card-title class="headline font-weight-bold pa-9"
       ><v-icon large color="#ee5d2c" class="mr-4">$statistics</v-icon
       >Statystyki</v-card-title
     >
-    <v-divider></v-divider>
     <v-card-text class="statistic-content">
       <p>Wykres zrealizowanych sprzedaży do liczby udzielonych rabatów</p>
       <doughnut-chart class="chart" @generated="setLegend"></doughnut-chart>

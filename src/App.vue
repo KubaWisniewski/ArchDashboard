@@ -15,12 +15,13 @@
 import Navigation from "./components/Navigation";
 import AppBar from "./components/AppBar";
 import Footer from "./components/Footer";
+import { mapGetters } from "vuex";
 export default {
   name: "App",
-  components: { Footer, AppBar, Navigation },
-  data: () => ({
-    loggedIn: true
-  })
+  computed: {
+    ...mapGetters(["loggedIn"])
+  },
+  components: { Footer, AppBar, Navigation }
 };
 </script>
 <style>

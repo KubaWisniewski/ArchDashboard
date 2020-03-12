@@ -20,7 +20,9 @@
             <v-list-item-subtitle>Architekt</v-list-item-subtitle>
             <v-list-item-subtitle
               ><v-icon small color="#ee5d2c" class=" ma-1 ">$settings</v-icon>
-              <v-icon small class="ma-1 grey--text">$logout</v-icon>
+              <v-icon small class="ma-1 grey--text" @click="logout"
+                >$logout</v-icon
+              >
             </v-list-item-subtitle>
           </v-list-item-content>
         </v-list-item>
@@ -56,6 +58,8 @@
 </template>
 
 <script>
+import { mapActions } from "vuex";
+
 export default {
   name: "Navigation",
   data: () => ({
@@ -67,7 +71,10 @@ export default {
       { title: "Dane osobowe", icon: "$person" },
       { title: "Finanse", icon: "$finance" }
     ]
-  })
+  }),
+  methods: {
+    ...mapActions(["logout"])
+  }
 };
 </script>
 

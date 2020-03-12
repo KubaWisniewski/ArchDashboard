@@ -32,7 +32,7 @@
           color="rgb(238,93,44)"
           height="50px"
           block
-          to="/dashboard"
+          @click="login"
           >Zaloguj <v-icon id="arrowIcon">$arrow</v-icon></v-btn
         >
       </v-card>
@@ -41,8 +41,13 @@
 </template>
 
 <script>
+import { mapActions } from "vuex";
+
 export default {
-  name: "LoginForm"
+  name: "LoginForm",
+  methods: {
+    ...mapActions(["login"])
+  }
 };
 </script>
 <style>

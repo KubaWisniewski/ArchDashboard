@@ -3,7 +3,7 @@
     ><v-spacer></v-spacer
     ><span
       ><v-icon color="#c7a275" class="mr-1">$envelope</v-icon> Potrzebujesz
-      pomocy? <a href=""> tech@homeden.pl</a></span
+      pomocy? <a href="mailto:tech@homeden.pl"> tech@homeden.pl</a></span
     ></v-footer
   >
 </template>

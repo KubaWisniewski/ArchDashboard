@@ -13,6 +13,9 @@ import ReportIcon from "../components/icons/ReportIcon";
 import ShoppingIcon from "../components/icons/ShoppingIcon";
 import StatisticsIcon from "../components/icons/StatisticsIcon";
 import FilterIcon from "../components/icons/FilterIcon";
+import ShoppingDoneIcon from "../components/icons/ShoppingDoneIcon";
+import TotalPaymentIcon from "../components/icons/TotalPaymentIcon";
+import FinancesToPaymentIcon from "../components/icons/FinancesToPaymentIcon";
 
 Vue.use(Vuetify);
 
@@ -57,6 +60,15 @@ export default new Vuetify({
       },
       filter: {
         component: FilterIcon
+      },
+      shoppingDone: {
+        component: ShoppingDoneIcon
+      },
+      totalPayment: {
+        component: TotalPaymentIcon
+      },
+      financesToPayment: {
+        component: FinancesToPaymentIcon
       }
     }
   }

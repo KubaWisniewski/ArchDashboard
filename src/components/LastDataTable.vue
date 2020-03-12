@@ -1,6 +1,6 @@
 <template>
   <v-card min-height="550px" outlined>
-    <v-card-title class="headline font-weight-bold pa-12"
+    <v-card-title class="headline font-weight-bold pa-9"
       ><v-icon large color="#ee5d2c" class="mr-4">$shopping</v-icon>Ostatnio
       dokonane zakupy <v-spacer></v-spacer>
       <!--      <v-text-field-->
@@ -14,26 +14,14 @@
       <!--    -->
       <filter-shopping></filter-shopping>
     </v-card-title>
-    <v-divider></v-divider>
     <v-data-table
       :headers="headers"
       :items="items"
       :search="search"
       class="data-row"
+      mobile-breakpoint="600px"
       hide-default-footer
     >
-      <template v-slot:item="{ item }">
-        <v-hover>
-          <template v-slot="{ hover }">
-            <tr :class="`elevation-${hover ? 4 : 0}`">
-              <td class="font-weight-bold">{{ item.name }}</td>
-              <td class="font-weight-bold">{{ item.product }}</td>
-              <td class="font-weight-bold">{{ item.amount }}</td>
-              <td class="font-weight-bold">{{ item.discount }}</td>
-            </tr>
-          </template>
-        </v-hover>
-      </template>
     </v-data-table>
   </v-card>
 </template>
@@ -112,5 +100,11 @@ tr:hover td:first-child {
 .theme--light.v-data-table thead tr:last-child th {
   border-bottom: none !important;
   border-top: none !important;
+}
+tbody td{
+  font-weight: bold;
+}
+tbody tr:hover {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 </style>

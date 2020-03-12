@@ -12,7 +12,7 @@ export default {
         const item = chart.data.datasets[0];
         for (var i = 0; i < item.data.length; i++) {
           legendHtml.push(
-            `<li>${chart.data.labels[i]} <span>${item.data[i]} %</span></li>`
+            `<li class="d-flex justify-space-between align-center">${chart.data.labels[i]} <span >${item.data[i]} %</span></li>`
           );
         }
         legendHtml.push("</ul>");
