@@ -2,7 +2,7 @@ import authService from "../services/auth.service";
 import router from "../router/index";
 
 const initialState = {
-  loggedIn: localStorage.getItem("loggedIn")
+  loggedIn: !!localStorage.getItem("loggedIn") || false
 };
 export const auth = {
   state: initialState,
@@ -23,7 +23,7 @@ export const auth = {
       authService.logout().then(() => {
         localStorage.removeItem("loggedIn");
         commit("logoutSuccess");
-        router.push("/");
+        router.push("/login");
       });
     }
   },

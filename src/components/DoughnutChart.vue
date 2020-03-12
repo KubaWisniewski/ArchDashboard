@@ -6,23 +6,23 @@ export default {
   data: () => ({
     options: {
       legend: false,
+      responsive: true,
+      maintainAspectRatio: false,
       legendCallback: function(chart) {
         const legendHtml = [];
         legendHtml.push("<ul>");
         const item = chart.data.datasets[0];
         for (var i = 0; i < item.data.length; i++) {
           legendHtml.push(
-            `<li class="d-flex justify-space-between align-center">${chart.data.labels[i]} <span >${item.data[i]} %</span></li>`
+            `<li class="d-flex justify-space-between align-center">${chart.data.labels[i]} <span>${item.data[i]} %</span></li>`
           );
         }
         legendHtml.push("</ul>");
         return legendHtml.join("");
-      },
-      responsive: true,
-      maintainAspectRatio: false
+      }
     }
   }),
-  mounted: function() {
+  mounted() {
     const gradient = this.$refs.canvas
       .getContext("2d")
       .createLinearGradient(0, 0, -30, 300);
@@ -43,11 +43,9 @@ export default {
     );
     const HTML = this.$data._chart.generateLegend();
     this.$emit("generated", HTML);
-  },
-  methods: {}
+  }
 };
 </script>
-
 <style>
 ul {
   list-style-type: none;

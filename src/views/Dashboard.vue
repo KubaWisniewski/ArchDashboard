@@ -2,7 +2,7 @@
   <v-container class="background">
     <v-row
       ><v-col class="col-lg-8"> <last-data-table></last-data-table></v-col
-      ><v-col class="col-lg-4"> <statistic-card></statistic-card></v-col
+      ><v-col class="col-lg-4"> <statistics-card></statistics-card></v-col
     ></v-row>
     <v-row>
       <v-col cols="12">
@@ -14,14 +14,14 @@
 
 <script>
 import LastDataTable from "../components/LastDataTable";
-import StatisticCard from "../components/StatisticCard";
+import StatisticsCard from "../components/StatisticsCard";
 import FinancesCard from "../components/FinancesCard";
 
 export default {
   name: "Dashboard",
   components: {
     FinancesCard,
-    StatisticCard,
+    StatisticsCard,
     LastDataTable
   }
 };

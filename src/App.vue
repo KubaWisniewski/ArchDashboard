@@ -12,7 +12,7 @@
 </template>
 
 <script>
-import Navigation from "./components/Navigation";
+import Navigation from "./components/NavigationDrawer";
 import AppBar from "./components/AppBar";
 import Footer from "./components/Footer";
 import { mapGetters } from "vuex";

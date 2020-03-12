@@ -3,16 +3,8 @@
     <v-card-title class="headline font-weight-bold pa-9"
       ><v-icon large color="#ee5d2c" class="mr-4">$shopping</v-icon>Ostatnio
       dokonane zakupy <v-spacer></v-spacer>
-      <!--      <v-text-field-->
-      <!--        v-model="search"-->
-      <!--        append-icon="mdi-magnify"-->
-      <!--        label="Search"-->
-      <!--        single-line-->
-      <!--        hide-details-->
-      <!--      ></v-text-field-->
-      <!--    >-->
-      <!--    -->
-      <filter-shopping></filter-shopping>
+
+      <shopping-filter @changeSearch="search = $event"></shopping-filter>
     </v-card-title>
     <v-data-table
       :headers="headers"
@@ -25,12 +17,11 @@
     </v-data-table>
   </v-card>
 </template>
-
 <script>
-import FilterShopping from "./FilterShopping";
+import ShoppingFilter from "./ShoppingFilter";
 export default {
   name: "LastDataTable",
-  components: { FilterShopping },
+  components: { ShoppingFilter },
   data: () => ({
     search: "",
     headers: [
@@ -101,7 +92,7 @@ tr:hover td:first-child {
   border-bottom: none !important;
   border-top: none !important;
 }
-tbody td{
+tbody td {
   font-weight: bold;
 }
 tbody tr:hover {

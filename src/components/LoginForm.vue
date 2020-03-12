@@ -8,7 +8,6 @@
         >
         <v-divider></v-divider>
         <p>Podaj swoje dane. Adres e-mail oraz hasło:</p>
-
         <v-form>
           <v-text-field
             label="Twój e-mail"

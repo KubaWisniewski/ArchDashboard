@@ -1,8 +1,7 @@
 <template>
   <v-card min-height="550px" outlined>
     <v-card-title class="headline font-weight-bold pa-9"
-      ><v-icon large color="#ee5d2c" class="mr-4">$statistics</v-icon
-      >Statystyki</v-card-title
+      ><v-icon large class="mr-4">$statistics</v-icon>Statystyki</v-card-title
     >
     <v-card-text class="statistic-content">
       <p>Wykres zrealizowanych sprzedaży do liczby udzielonych rabatów</p>
@@ -27,8 +26,10 @@ export default {
   components: { DoughnutChart }
 };
 </script>
-
 <style scoped>
+.v-icon {
+  color: #ee5d2c;
+}
 .chart {
   height: 200px;
   width: 200px;

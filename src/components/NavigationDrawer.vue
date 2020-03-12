@@ -1,7 +1,12 @@
 <template>
   <v-navigation-drawer app floating width="270px">
     <v-container class="fill-height flex-column pa-0" fluid>
-      <img id="logo" class="ma-5" alt="Logo" src="../assets/LogoDash.png" />
+      <img
+        id="logo"
+        class="ma-5"
+        alt="Logo"
+        src="../assets/LogoDashboard.png"
+      />
 
       <v-list nav dense class="mb-12">
         <v-list-item align="center">
@@ -29,7 +34,6 @@
       </v-list>
       <v-list nav dense id="menu">
         <b class="ml-12">Twoje manu:</b>
-
         <v-list-item-group>
           <v-list-item
             v-for="item in items"
@@ -66,10 +70,10 @@ export default {
     item: 1,
     items: [
       { title: "Przegląd", icon: "$home", to: "/dashboard" },
-      { title: "Raport sprzedaży", icon: "$report" },
-      { title: "Udzielone rabaty", icon: "%" },
-      { title: "Dane osobowe", icon: "$person" },
-      { title: "Finanse", icon: "$finance" }
+      { title: "Raport sprzedaży", icon: "$report", to: "/" },
+      { title: "Udzielone rabaty", icon: "%", to: "/" },
+      { title: "Dane osobowe", icon: "$person", to: "/" },
+      { title: "Finanse", icon: "$finance", to: "/" }
     ]
   }),
   methods: {
